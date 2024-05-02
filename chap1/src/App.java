@@ -1,8 +1,16 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
+        int[] results = new int[10];
+
+        int i = 0;
+
+
+
         do {
             System.out.println("첫 숫자 입력");
             int num1 = sc.nextInt();
@@ -16,6 +24,7 @@ public class App {
             int result = 0;
 
             String exit = "exit";
+
 
 
             switch (op) {
@@ -41,6 +50,13 @@ public class App {
                 default:
                     System.out.println("올바른 사칙연산 기호가 아닙니다.");
             }
+
+            results[i] = result;
+            i++;
+
+            System.out.println("Arrayas.ToString() = " + Arrays.toString(results));
+
+
             System.out.println("답은 : " + result);
 
             System.out.println("종료하시겠습니까? (exit 입력시 종료) ");
