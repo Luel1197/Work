@@ -7,9 +7,11 @@ public class App {
 
         int[] results = new int[10];
 
-        int i = 0;
+        int index = 0;
 
+        int result = 0;
 
+        String exit = "exit";
 
         do {
             System.out.println("첫 숫자 입력");
@@ -20,10 +22,6 @@ public class App {
 
             System.out.println("사칙연산 기호 입력");
             char op = sc.next().charAt(0);
-
-            int result = 0;
-
-            String exit = "exit";
 
 
 
@@ -49,10 +47,19 @@ public class App {
 
                 default:
                     System.out.println("올바른 사칙연산 기호가 아닙니다.");
+                    return;
             }
 
-            results[i] = result;
-            i++;
+            if (index == 10) {
+                for (int i = 0; i < results.length - 1; i++) {
+                    results[i] = results[i+1];
+                }
+                index--;
+            }
+
+
+            results[index] = result;
+            index++;
 
             System.out.println("Arrayas.ToString() = " + Arrays.toString(results));
 
