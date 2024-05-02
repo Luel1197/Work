@@ -1,11 +1,15 @@
-import java.util.Arrays;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int[] results = new int[10];
+        List<Integer> results = new ArrayList<>();
+
+
 
         int index = 0;
 
@@ -50,22 +54,21 @@ public class App {
                     return;
             }
 
-            if (index == 10) {
-                for (int i = 0; i < results.length - 1; i++) {
-                    results[i] = results[i+1];
-                }
-                index--;
+
+
+
+            results.add(result);
+
+            System.out.println("가장 첫번째 결과 삭제하나요? (remove)");
+            if (sc.next().equals("remove")) {
+                results.remove(0);
             }
 
 
-            results[index] = result;
-            index++;
-
-            System.out.println("Arrayas.ToString() = " + Arrays.toString(results));
 
 
             System.out.println("답은 : " + result);
-
+            System.out.println("연산 저장 " + results);
             System.out.println("종료하시겠습니까? (exit 입력시 종료) ");
 
         } while (!sc.next().equals("exit"));
