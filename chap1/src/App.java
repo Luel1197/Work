@@ -68,7 +68,17 @@ public class App {
 
 
             System.out.println("답은 : " + result);
-            System.out.println("연산 저장 " + results);
+
+
+            System.out.println("저장된 연산결과 조회? (inquiry) " );
+            if (sc.next().equals("inquiry")) {
+                for (Integer res : results) {
+                    System.out.print(res + ", ");
+                }
+            }
+
+
+            System.out.println();
             System.out.println("종료하시겠습니까? (exit 입력시 종료) ");
 
         } while (!sc.next().equals("exit"));
