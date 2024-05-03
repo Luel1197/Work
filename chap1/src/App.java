@@ -9,7 +9,7 @@ public class App {
 
 
         //추상클래스로 받을수 있음
-        Calculator arithcalc = new ArithmeticCalculator(new ArrayList<>());
+        Calculator arithcalc = new ArithmeticCalculator(new ArrayList<>(), new AddOperator(), new SubtractOperator(), new MultiplyOperator(), new DivideOperator());
         Calculator areacalc = new areaCalculator(new ArrayList<>());
 
 //        //매개 변수가 1개인것을 예측했는데 아무것도 없다 기본 생성자가 없다 컴파일러가 만들어주지 않는다.
