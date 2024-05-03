@@ -9,8 +9,10 @@ public class App {
 
 
 
-        Calculator calc = new Calculator();
+        Calculator calc = new Calculator(new ArrayList<>());
 
+//        //매개 변수가 1개인것을 예측했는데 아무것도 없다 기본 생성자가 없다 컴파일러가 만들어주지 않는다.
+//        Calculator calc2 = new Calculator();
 
 
 

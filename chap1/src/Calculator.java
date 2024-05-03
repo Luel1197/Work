@@ -3,8 +3,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Calculator {
-    private List<Integer> results = new ArrayList<>();
+    private List<Integer> results ;
 
+
+    //오버로딩 생성자
+    //생성자를 통해서도 필드값을 초기화 가능
+    //오버로딩 된 생성자가 생기면 기본 생성자가 생기지 않음
+    public Calculator(List<Integer> results) {
+       this.results = results
+    }
 
 
     public List<Integer> getResults() {
