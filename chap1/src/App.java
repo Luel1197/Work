@@ -33,9 +33,11 @@ public class App {
 
             System.out.println("답은 : " + result);
 
+
+            //요청 0번 칸 리무브 리절트 명령어 실행 요청
             System.out.println("가장 첫번째 결과 삭제하나요? (remove)");
             if (sc.next().equals("remove")) {
-                calc.getResults().remove(0);
+                calc.removeResult(0);
             }
 
 

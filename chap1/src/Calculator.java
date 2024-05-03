@@ -5,6 +5,8 @@ import java.util.List;
 public class Calculator {
     private List<Integer> results = new ArrayList<>();
 
+
+
     public List<Integer> getResults() {
         return results;
     }
@@ -45,5 +47,9 @@ public class Calculator {
 
 
         return result;
+    }
+
+    public void removeResult(int index) {
+        this.results.remove(index);
     }
 }
