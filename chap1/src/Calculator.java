@@ -52,4 +52,11 @@ public class Calculator {
     public void removeResult(int index) {
         this.results.remove(index);
     }
+
+
+    public void inquiryResults() {
+        for (Integer res : results) {
+            System.out.print(res + ", ");
+        }
+    }
 }

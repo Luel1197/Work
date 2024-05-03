@@ -44,9 +44,7 @@ public class App {
 
             System.out.println("저장된 연산결과 조회? (inquiry) " );
             if (sc.next().equals("inquiry")) {
-                for (Integer res : calc.getResults()) {
-                    System.out.print(res + ", ");
-                }
+                calc.inquiryResults();
             }
 
             System.out.println();
