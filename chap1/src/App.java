@@ -7,6 +7,8 @@ public class App {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+
+
         Calculator calc = new Calculator();
 
 
@@ -27,21 +29,20 @@ public class App {
 
             int result = calc.calculate(num1, num2, op);
 
-            calc.results.add(result);
+            calc.getResults().add(result);
 
             System.out.println("답은 : " + result);
 
             System.out.println("가장 첫번째 결과 삭제하나요? (remove)");
             if (sc.next().equals("remove")) {
-                calc.results.remove(0);
+                calc.getResults().remove(0);
             }
-
 
 
 
             System.out.println("저장된 연산결과 조회? (inquiry) " );
             if (sc.next().equals("inquiry")) {
-                for (Integer res : calc.results) {
+                for (Integer res : calc.getResults()) {
                     System.out.print(res + ", ");
                 }
             }

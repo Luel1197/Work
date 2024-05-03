@@ -3,7 +3,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Calculator {
-    List<Integer> results = new ArrayList<>();
+    private List<Integer> results = new ArrayList<>();
+
+    public List<Integer> getResults() {
+        return results;
+    }
+
+    public void setResults(List<Integer> results) {
+        this.results = results;
+    }
 
     public int calculate(int num1, int num2, char op) {
         int result = 0;
