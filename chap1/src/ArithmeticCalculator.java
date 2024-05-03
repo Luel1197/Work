@@ -2,19 +2,10 @@ import java.util.List;
 
 public class ArithmeticCalculator extends Calculator {
 
-    private final AddOperator addOperator;
-    private final SubtractOperator subtractOperator;
-    private final MultiplyOperator multiplyOperator;
-    private final DivideOperator divideOperator;
 
-    public ArithmeticCalculator(List<Double> results, AddOperator addOperator,
-                                SubtractOperator subtractOperator, MultiplyOperator
-                                        multiplyOperator, DivideOperator divideOperator) {
+    public ArithmeticCalculator(List<Double> results) {
         super(results);
-        this.addOperator = addOperator;
-        this.subtractOperator = subtractOperator;
-        this.multiplyOperator = multiplyOperator;
-        this.divideOperator = divideOperator;
+
     }
 
 
@@ -51,6 +42,10 @@ public class ArithmeticCalculator extends Calculator {
 
 
         return result;
+    }
+
+    private Operator operatorFactory(char op) {
+        return switch (operator)
     }
 
     @Override
