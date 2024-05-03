@@ -2,11 +2,22 @@ import java.util.List;
 
 public class ArithmeticCalculator extends Calculator {
 
+    private final AddOperator addOperator;
+    private final SubtractOperator subtractOperator;
+    private final MultiplyOperator multiplyOperator;
+    private final DivideOperator divideOperator;
 
-    public ArithmeticCalculator(List<Double> results) {
-        //수퍼를 통해서 상위클래스에 생성자를 받는것
+    public ArithmeticCalculator(List<Double> results, AddOperator addOperator,
+                                SubtractOperator subtractOperator, MultiplyOperator
+                                        multiplyOperator, DivideOperator divideOperator) {
         super(results);
+        this.addOperator = addOperator;
+        this.subtractOperator = subtractOperator;
+        this.multiplyOperator = multiplyOperator;
+        this.divideOperator = divideOperator;
     }
+
+
 
 
     public double calculate(int num1, int num2, char op) {
@@ -14,22 +25,22 @@ public class ArithmeticCalculator extends Calculator {
 
         switch (op) {
             case '+':
-                result = num1 + num2;
+                result = addOperator.operate(num1, num2);
                 break;
 
             case '-':
-                result = num1 - num2;
+                result = subtractOperator.operate(num1, num2);
                 break;
 
             case '*':
-                result = num1 * num2;
+                result = multiplyOperator.operate(num1, num2);
                 break;
 
             case '/':
                 if (num2 == 0) {
                     throw new ArithmeticException("나눗셈에서 분모가 0인 오류");
                 }
-                result = num1 / num2;
+                result = divideOperator.operate(num1, num2);
                 break;
 
             default:
